@@ -3,9 +3,9 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import HomePage from "./Pages/Home.page";
+import loadable from '@loadable/component'
 
-
+const HomePage = loadable(() => import('./Pages/Home.page'));
 
 const HomeRouter = () => {
     return (

@@ -3,8 +3,10 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import LoginPage from "./Pages/Login.page";
-import SiginPage from "./Pages/Sigin.page";
+import loadable from '@loadable/component'
+
+const LoginPage = loadable( () => import('./Pages/Login.page'));
+const SiginPage = loadable( () => import('./Pages/Sigin.page'));
 
 
 const AuthRouter = () => {

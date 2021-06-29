@@ -3,7 +3,9 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import BoardPage from "./Pages/board.page";
+import loadable from "@loadable/component";
+
+const BoardPage = loadable( () => import('./Pages/board.page'));
 
 const BoardRouter = () => {
     return (
